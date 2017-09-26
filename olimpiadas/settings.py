@@ -25,7 +25,7 @@ SECRET_KEY = '8s@$e+v1+_q52&!isi4*!a!v7wt!t_cy^0$^q3dodc+)(r4pnu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -82,18 +82,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Onp',
         'USER': 'root',
-        'PASSWORD': 'toor',
-        'HOST': '172.17.0.1',
+            'PASSWORD': 'toor',
+        'HOST': '127.0.0.1',
         'PORT': '3307',
     }
 }
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAdminUser',
-    ],
-    'PAGE_SIZE': 10
-}
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
