@@ -4,5 +4,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class Onp2017Config(AppConfig):
-    name = 'onp2017'
+class DataConfig(AppConfig):
+    name = 'data'
