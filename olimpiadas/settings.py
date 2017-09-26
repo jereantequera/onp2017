@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'onp2017.apps.Onp2017Config',
+    'data',
+    'account',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -78,7 +80,7 @@ WSGI_APPLICATION = 'olimpiadas.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MICENTRO',
+        'NAME': 'Onp',
         'USER': 'root',
         'PASSWORD': 'toor',
         'HOST': '172.17.0.1',
@@ -86,7 +88,12 @@ DATABASES = {
     }
 }
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAdminUser',
+    ],
+    'PAGE_SIZE': 10
+}
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
